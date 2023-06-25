@@ -1,6 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const {
+  verifyTokenAndAuthorization,
+  verifyTokenAndAdmin,
+} = require('../middlewares/verifyToken');
+const {
   updateUserById,
   getAllUsers,
   getUserById,
