@@ -27,7 +27,7 @@ function verifyTokenAndAuthorization(req, res, next) {
   });
 }
 
-// verify token & token
+// verify token & admin
 function verifyTokenAndAdmin(req, res, next) {
   verifyToken(req, res, () => {
     if (req.user.isAdmin) {
