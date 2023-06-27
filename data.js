@@ -1,42 +1,42 @@
 const books = [
   {
     title: 'Black Swan',
-    author: '6492bbac6e868cb74c796e5e',
+    author: '64999b2bd5983bdb24829f03',
     description: 'About Black Swan',
     price: 10,
     cover: 'soft cover',
   },
   {
     title: 'Skin In The Game',
-    author: '6492bbac6e868cb74c796e5e',
+    author: '64999b2bd5983bdb24829f03',
     description: 'About Skin In The Game',
     price: 12,
     cover: 'soft cover',
   },
   {
     title: 'Fooled By Randomness',
-    author: '6492bbac6e868cb74c796e5e',
+    author: '64999b2bd5983bdb24829f03',
     description: 'About Fooled By Randomness',
     price: 8,
     cover: 'hard cover',
   },
   {
     title: 'The Forty Rules Of Loves',
-    author: '6497d005854d31fc20433951',
+    author: '64999b37d5983bdb24829f05',
     description: 'About The Forty Rules Of Loves',
     price: 14,
     cover: 'soft cover',
   },
   {
     title: 'The Island Of Missing Trees',
-    author: '6497d005854d31fc20433951',
+    author: '64999b37d5983bdb24829f05',
     description: 'About The Island Of Missing Trees',
     price: 9,
     cover: 'soft cover',
   },
   {
     title: 'The Flea Palace',
-    author: '6497d005854d31fc20433951',
+    author: '64999b37d5983bdb24829f05',
     description: 'About The Flea Palace',
     price: 10,
     cover: 'hard cover',
@@ -66,7 +66,21 @@ const authors = [
   },
 ];
 
+const users = [
+  {
+    username: 'RedaDgh',
+    email: 'rida@gmail.com',
+    password: '000000',
+  },
+  {
+    username: 'elouahabi',
+    email: 'elouahabi@gmail.com',
+    password: '000000',
+  },
+];
+
 module.exports = {
   books,
   authors,
+  users,
 };

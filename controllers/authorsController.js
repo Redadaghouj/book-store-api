@@ -4,6 +4,7 @@ const {
   validateCreateAuthor,
   validateUpdateAuthor,
 } = require('../models/Author');
+
 /**
  * @desc Get all authors
  * @route /api/authors

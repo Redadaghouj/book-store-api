@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
 const { registerUser, loginUser } = require('../controllers/authController');
 
 // api/auth/register
