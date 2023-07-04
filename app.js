@@ -1,5 +1,7 @@
 const express = require('express');
 const path = require('path');
+const helmet = require('helmet');
+const cors = require('cors');
 const connectToDB = require('./config/db');
 const { notFound, errorHandler } = require('./middlewares/errors');
 require('dotenv').config();
@@ -19,6 +21,12 @@ app.use(express.urlencoded({ extended: true }));
 // static folder
 app.use(express.static(path.join(__dirname, 'images')));
 // open image with link => http://localhost:5000/:image_name
+
+// secure express app by setting http res headers
+app.use(helmet());
+
+// specifies which domains access your resources
+app.use(cors());
 
 // set view
 app.set('view engine', 'ejs');
