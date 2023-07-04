@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const connectToDB = require('./config/db');
 const { notFound, errorHandler } = require('./middlewares/errors');
 require('dotenv').config();
@@ -15,6 +16,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // app.use(logger);
 
+// static folder
+app.use(express.static(path.join(__dirname, 'images')));
+// open image with link => http://localhost:5000/:image_name
+
 // set view
 app.set('view engine', 'ejs');
 
@@ -23,6 +28,7 @@ app.use('/api/books', require('./routes/books'));
 app.use('/api/authors', require('./routes/authors'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/users', require('./routes/users'));
+app.use('/api/upload', require('./routes/upload'));
 app.use('/password', require('./routes/password'));
 
 // error handler middlewares
